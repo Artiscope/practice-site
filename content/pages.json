@@ -1,0 +1,323 @@
+{
+  "_how_to_edit": "Each page is a list of sections shown top to bottom. 'visible' hides a section without deleting it. 'settings' holds the words and choices for that section. Edit this from Artiscope Digital Home.",
+  "shared": {
+    "opening": {
+      "type": "opening",
+      "visible": true,
+      "settings": {
+        "name": "World Art Review",
+        "tagline": "Discover Artists. Understand Art."
+      }
+    },
+    "header": {
+      "type": "header",
+      "visible": true,
+      "settings": {
+        "name": "World Art Review",
+        "links": [
+          [
+            "Artists A to Z",
+            "#artists"
+          ],
+          [
+            "Reviews",
+            "#reviews"
+          ],
+          [
+            "Art Explained",
+            "#explained"
+          ]
+        ]
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "visible": true,
+      "settings": {
+        "eyebrow": "Get the review",
+        "heading": [
+          "New portfolios,",
+          "once a month."
+        ],
+        "button": "Subscribe",
+        "blurb": "Researched artist portfolios, reviews and collecting guides. Discover Artists. Understand Art.",
+        "columns": [
+          {
+            "title": "Read",
+            "links": [
+              [
+                "Artists A to Z",
+                "#artists"
+              ],
+              [
+                "Reviews",
+                "#reviews"
+              ],
+              [
+                "Art Explained",
+                "#explained"
+              ],
+              [
+                "Exhibition Guides",
+                "#guides"
+              ]
+            ]
+          },
+          {
+            "title": "Collect",
+            "links": [
+              [
+                "Collector's Library",
+                "#library"
+              ],
+              [
+                "Original or print?",
+                "#a-original-vs-print"
+              ],
+              [
+                "Provenance",
+                "#a-provenance-certificates"
+              ],
+              [
+                "Research an artist",
+                "#a-research-emerging-artist"
+              ]
+            ]
+          },
+          {
+            "title": "About",
+            "links": [
+              [
+                "How we research",
+                "#home"
+              ],
+              [
+                "Sources",
+                "#standards"
+              ],
+              [
+                "Suggest an artist",
+                "mailto:info@grovegallery.com?subject=Suggest%20an%20artist%20for%20World%20Art%20Review"
+              ],
+              [
+                "Contact",
+                "mailto:info@grovegallery.com"
+              ]
+            ]
+          }
+        ],
+        "copyright": "© 2026 World Art Review. All rights reserved.",
+        "elsewhere": [
+          [
+            "Instagram",
+            "#"
+          ],
+          [
+            "X",
+            "#"
+          ],
+          [
+            "LinkedIn",
+            "#"
+          ],
+          [
+            "Privacy",
+            "#standards"
+          ],
+          [
+            "Terms",
+            "#standards"
+          ]
+        ]
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "visible": true,
+          "settings": {
+            "headline": [
+              {
+                "t": "Discover",
+                "ital": false
+              },
+              {
+                "t": "Artists.",
+                "ital": true
+              }
+            ],
+            "tagline": [
+              {
+                "t": "Understand",
+                "ital": false
+              },
+              {
+                "t": "Art.",
+                "ital": true
+              }
+            ],
+            "artist": "",
+            "rule_label": "Our rule",
+            "rule_text": "Every fact carries a numbered source. Where only the gallery or the artist says so, we say so.",
+            "rule_link": "How we work",
+            "latest": [
+              "zara-muse-profile",
+              "konn-artiss-profile",
+              "review-anti-frieze"
+            ]
+          }
+        },
+        {
+          "id": "featured",
+          "type": "featured",
+          "visible": true,
+          "settings": {
+            "badge": "Artist in focus",
+            "artists": []
+          }
+        },
+        {
+          "id": "sections",
+          "type": "section-list",
+          "visible": true,
+          "settings": {
+            "eyebrow": "What you will find here",
+            "heading": [
+              "Read by",
+              "section"
+            ],
+            "rows": [
+              {
+                "n": "01",
+                "name": "Artists A to Z",
+                "desc": "Researched portfolios: biography, style, career and selected works.",
+                "href": "#artists",
+                "count": "artists",
+                "unit": "portfolio"
+              },
+              {
+                "n": "02",
+                "name": "Reviews",
+                "desc": "Close readings of single works, shows and interventions.",
+                "href": "#reviews",
+                "count": "reviews",
+                "unit": "review"
+              },
+              {
+                "n": "03",
+                "name": "Art Explained",
+                "desc": "Techniques, materials and ideas, in plain language.",
+                "href": "#explained",
+                "count": "explained",
+                "unit": "guide"
+              },
+              {
+                "n": "04",
+                "name": "Collector's Library",
+                "desc": "How to research an artist, read a certificate and tell an original from a print.",
+                "href": "#library",
+                "count": "library",
+                "unit": "guide"
+              }
+            ]
+          }
+        },
+        {
+          "id": "explainedHome",
+          "type": "explained",
+          "visible": true,
+          "settings": {
+            "heading": [
+              "How to",
+              "look at",
+              "a painting"
+            ],
+            "text": "Short, sourced explainers on the techniques and materials behind the work, so you know what you are looking at before you look it up.",
+            "count": 2
+          }
+        },
+        {
+          "id": "numbers",
+          "type": "numbers",
+          "visible": true,
+          "settings": {
+            "eyebrow": "The review so far",
+            "heading": [
+              "Research you",
+              "can check"
+            ],
+            "labels": [
+              "Artists documented",
+              "Articles and reviews",
+              "Sources cited",
+              "Facts with a numbered source"
+            ]
+          }
+        },
+        {
+          "id": "method",
+          "type": "method",
+          "visible": true,
+          "settings": {
+            "eyebrow": "How we research",
+            "heading": [
+              "The work first,",
+              "then the story"
+            ],
+            "cards": [
+              {
+                "n": "1",
+                "title": "Start with the work",
+                "text": "<p>We start with the work itself : what it is made of, how it was made and where it has been shown.</p>",
+                "sub": "Seen, measured, described"
+              },
+              {
+                "n": "2",
+                "title": "Every fact, sourced",
+                "text": "Every fact in a portfolio carries a numbered source you can open and read for yourself.",
+                "sub": "Press, auction records, gallery files"
+              },
+              {
+                "n": "3",
+                "title": "Publicity, flagged",
+                "text": "Claims that come only from publicity are labelled <span class=\"reported\">Reported</span> so you can weigh them.",
+                "sub": "Kept apart from checked fact"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "standards": {
+      "title": "Editorial standards",
+      "sections": [
+        {
+          "id": "heading",
+          "type": "page-heading",
+          "visible": true,
+          "settings": {
+            "eyebrow": "Editorial standards",
+            "heading": [
+              "How we research",
+              "and what we publish"
+            ],
+            "intro": "The rules every portfolio and article on World Art Review follows."
+          }
+        },
+        {
+          "id": "text",
+          "type": "long-text",
+          "visible": true,
+          "settings": {
+            "body": "\n  <h2>Every fact has a source</h2><p>Each fact in an artist portfolio carries a numbered citation to where it came from. If we cannot source something, we do not state it as fact; it appears as a gap to be filled.</p>\n  <h2>We say who said it</h2><p>We label sources by type: independent reporting, interviews with the artist, the artist's or gallery's own publicity, and gallery records. A claim that comes only from publicity is marked <span class=\"reported\">Reported</span>.</p>\n  <h2>We show what is missing</h2><p>Portfolios show a research status: how many facts are sourced and how many dates or details are still awaiting confirmation.</p>\n  <h2>Our relationships</h2><p><span class=\"placeholder\">[Disclosure of the link between World Art Review and Grove Gallery, wording to confirm.]</span></p>\n  <h2>Corrections</h2><p>If you spot an error, write to <a href=\"mailto:info@grovegallery.com?subject=Correction\">info@grovegallery.com</a>. We correct promptly and note the change on the page.</p>\n  <h2>Privacy and terms</h2><p><span class=\"placeholder\">[Privacy notice and terms of use to be added before launch.]</span></p>\n  "
+          }
+        }
+      ]
+    }
+  }
+}

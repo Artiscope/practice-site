@@ -1,0 +1,58 @@
+name: Publish the practice site
+
+# Builds the page from its content and layout, then publishes the
+# website only, with a preview of each working copy beside it. The agent's working files (its brief,
+# voice guide, log, content calendar and photo inbox) stay in the
+# repository and are left out of the published site.
+
+on:
+  push:
+    branches: [main]
+    # A photo arriving in inbox/ changes nothing on the site by itself.
+    # The "Place photos" step starts a publish once it has placed it.
+    paths-ignore: ['inbox/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gather the practice site
+        # Built like a preview: search engines are told to ignore every page, and there is no domain.
+        run: bash .github/scripts/assemble.sh . _site preview
+      - name: Add the previews of work not yet published
+        # Each working copy made in Artiscope Digital Home is a branch named
+        # adh/<name>. It is built into preview/<name>/ beside the live site.
+        run: |
+          git fetch --quiet --depth=1 origin '+refs/heads/adh/*:refs/remotes/origin/adh/*' || true
+          for ref in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/adh/); do
+            name="${ref#origin/adh/}"
+            case "$name" in *[!a-z0-9-]*|"") continue;; esac
+            git worktree add --quiet --detach "/tmp/preview-src/$name" "$ref"
+            if bash .github/scripts/assemble.sh "/tmp/preview-src/$name" "/tmp/preview-out/$name" preview; then
+              mkdir -p _site/preview && mv "/tmp/preview-out/$name" "_site/preview/$name"
+            else
+              echo "The preview of $name could not be built and was left out."
+            fi
+          done
+          echo "Published files:"
+          cd _site && find . -type f | sort | head -400
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
